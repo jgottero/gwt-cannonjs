@@ -1,0 +1,118 @@
+/* Theme based on http://bootstrapmaster.com/live/simpliq/widgets.html */
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+
+html { overflow: hidden; }
+
+body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+}
+
+.menu {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 200px;
+	background: #383e4b;
+	overflow: auto;
+}
+
+.menu-title {
+	font-size: 16px;
+	text-align: center;
+	line-height: 20px;
+	padding: 12px 20px;
+	background: #1e8fc6;
+	color: white;
+	margin-bottom: 10px;
+	font-family: 'Kaushan Script', sans-serif;
+}
+
+.menu-item {
+	line-height: 20px;
+	padding: 8px 20px;
+	cursor: pointer;
+	color: white;
+	margin-bottom: 1px;
+    -moz-transition: 0.2s ease-out padding;
+    -o-transition: 0.2s ease-out padding;
+    -ms-transition: 0.2s ease-out padding;
+    -webkit-transition: 0.2s ease-out padding;
+    transition: 0.2s ease-out padding;
+}
+
+.menu-item:hover {
+	padding-left: 24px;
+	background: #2d323d;
+}
+
+.demo-container {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 200px;
+	right: 0;
+}
+
+.demo-container .tab-bar {
+	padding: 0 10px;
+	line-height: 20px;
+	background: #36a9e1;
+}
+
+.demo-container .tab {
+	cursor: pointer;
+	display: inline-block;
+	padding: 12px 20px;
+	color: white;
+}
+
+.demo-container .tab-selected {
+	color: black;
+	background-color: white;
+}
+
+.demo-container .tab-panel-container {
+	position: absolute;
+	top: 44px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.demo-container iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+.demo-container .source-code {
+	height: 100%;
+	overflow: auto;
+}
+
+.syntaxhighlighter {
+	overflow: hidden !important;
+}
+
+.select-demo {
+	position: absolute;
+	top: 80px;
+	left: 30px;
+	font-size: 26px;
+	color: black;
+	font-family: 'Kaushan Script', sans-serif;
+}

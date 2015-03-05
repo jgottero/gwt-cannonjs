@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.7.0//EN" "http://gwtproject.org/doctype/2.7.0/gwt-module.dtd">
+
+<module rename-to="demoLauncher">
+    <inherits name="com.google.gwt.logging.Logging"/>
+    <set-property name="gwt.logging.simpleRemoteHandler" value="ENABLED" />
+	<set-property name="compiler.stackMode" value="emulated" />
+	<set-configuration-property name="compiler.emulatedStack.recordLineNumbers" value="true"/>
+	<set-configuration-property name="compiler.emulatedStack.recordFileNames" value="true"/>
+	
+    <inherits name="com.github.gwtcannonjs.Core"/>
+	
+	<entry-point class="com.github.gwtcannonjs.demo.client.DemoLauncher"/>
+</module>
