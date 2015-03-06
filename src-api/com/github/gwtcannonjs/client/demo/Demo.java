@@ -1,3 +1,6 @@
+// The MIT License (MIT)
+// Copyright (c) 2015 Jérémie Gottero
+
 package com.github.gwtcannonjs.client.demo;
 
 import com.github.gwtcannonjs.client.objects.Body;
@@ -36,6 +39,10 @@ public class Demo extends JavaScriptObject {
 	
 	public final native void addVisual(Body body) /*-{
 		this.addVisual(body);
+	}-*/;
+	
+	public final native void removeVisual(Body body) /*-{
+		this.removeVisual(body);
 	}-*/;
 	
 	public final native World getWorld() /*-{

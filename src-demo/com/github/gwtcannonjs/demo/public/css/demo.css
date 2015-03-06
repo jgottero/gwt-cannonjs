@@ -22,7 +22,7 @@ body {
 
 .menu {
 	position: absolute;
-	top: 0;
+	top: 44px;
 	bottom: 0;
 	left: 0;
 	width: 200px;
@@ -30,7 +30,11 @@ body {
 	overflow: auto;
 }
 
-.menu-title {
+.page-title {
+	width: 160px;
+	position: absolute;
+	top: 0;
+	left: 0;
 	font-size: 16px;
 	text-align: center;
 	line-height: 20px;
@@ -43,7 +47,7 @@ body {
 
 .menu-item {
 	line-height: 20px;
-	padding: 8px 20px;
+	padding: 5px 20px;
 	cursor: pointer;
 	color: white;
 	margin-bottom: 1px;

@@ -1,3 +1,6 @@
+// The MIT License (MIT)
+// Copyright (c) 2015 Jérémie Gottero
+
 package com.github.gwtcannonjs.demo.client;
 
 import com.google.gwt.event.dom.client.ClickEvent;

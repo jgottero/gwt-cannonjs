@@ -1,3 +1,6 @@
+// The MIT License (MIT)
+// Copyright (c) 2015 Jérémie Gottero
+
 package com.github.gwtcannonjs.client.objects;
 
 import com.github.gwtcannonjs.client.shapes.Particle;

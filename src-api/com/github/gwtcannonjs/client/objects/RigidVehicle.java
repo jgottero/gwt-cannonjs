@@ -1,3 +1,6 @@
+// The MIT License (MIT)
+// Copyright (c) 2015 Jérémie Gottero
+
 package com.github.gwtcannonjs.client.objects;
 
 import com.github.gwtcannonjs.client.constraints.HingeConstraint;
@@ -13,6 +16,19 @@ public class RigidVehicle extends JavaScriptObject {
 	protected RigidVehicle() {
 		// A JavaScriptObject cannot be created directly
 	}
+	
+	public final native JsArray<Body> getWheelBodies() /*-{
+		return this.wheelBodies;
+	}-*/;
+	
+	public final native void setWheelBodies(JsArray<Body> wheelBodies) /*-{
+		this.wheelBodies = wheelBodies;
+	}-*/;
+	
+	public final native RigidVehicle withWheelBodies(JsArray<Body> wheelBodies) /*-{
+		this.wheelBodies = wheelBodies;
+		return this;
+	}-*/;
 	
 	public final native Vec3 getCoordinateSystem() /*-{
 		return this.coordinateSystem;

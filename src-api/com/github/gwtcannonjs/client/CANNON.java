@@ -1,3 +1,6 @@
+// The MIT License (MIT)
+// Copyright (c) 2015 Jérémie Gottero
+
 package com.github.gwtcannonjs.client;
 
 import com.github.gwtcannonjs.client.collision.AABB;
@@ -199,6 +202,16 @@ public class CANNON {
 	}-*/;
 	
 	/**
+	 * Constrains two bodies to be at a constant distance from each other.
+	 * @param bodyA
+	 * @param bodyB
+	 * @param distance
+	 */
+	public static native DistanceConstraint newDistanceConstraint(Body bodyA, Body bodyB, double distance) /*-{
+		return new $wnd.CANNON.DistanceConstraint(bodyA, bodyB, distance);
+	}-*/;
+	
+	/**
 	 * Equation base class
 	 * @param bi
 	 * @param bj
@@ -354,6 +367,17 @@ public class CANNON {
 	}-*/;
 	
 	/**
+	 * Connects two bodies at given offset points.
+	 * @param bodyA
+	 * @param pivotA The point relative to the center of mass of bodyA which bodyA is constrained to.
+	 * @param bodyB Body that will be constrained in a similar way to the same point as bodyA. We will therefore get sort of a link between bodyA and bodyB. If not specified, bodyA will be constrained to a static point.
+	 * @param pivotB See pivotA.
+	 */
+	public static native PointToPointConstraint newPointToPointConstraint(Body bodyA, Vec3 pivotA, Body bodyB, Vec3 pivotB) /*-{
+		return new $wnd.CANNON.PointToPointConstraint(bodyA, pivotA, bodyB, pivotB);
+	}-*/;
+	
+	/**
 	 * For pooling objects that can be reused.
 	 */
 	public static native Pool<?> newPool() /*-{
@@ -409,8 +433,8 @@ public class CANNON {
 	/**
 	 * Simple vehicle helper class with spherical rigid body wheels.
 	 */
-	public static native RigidVehicle newRigidVehicle() /*-{
-		return new $wnd.CANNON.RigidVehicle();
+	public static native RigidVehicle newRigidVehicle(RigidVehicleOptions options) /*-{
+		return new $wnd.CANNON.RigidVehicle(options);
 	}-*/;
 	
 	public static native RigidVehicleOptions newRigidVehicleOptions() /*-{

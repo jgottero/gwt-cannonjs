@@ -1,3 +1,6 @@
+// The MIT License (MIT)
+// Copyright (c) 2015 Jérémie Gottero
+
 package com.github.gwtcannonjs.client.objects;
 
 import com.github.gwtcannonjs.client.math.Transform;
@@ -211,7 +214,8 @@ public class RaycastVehicle extends JavaScriptObject {
 	
 	/**
 	 * Update one of the wheel transform.
-	 * @param wheelIndex
+	 * Note when rendering wheels: during each step, wheel transforms are updated BEFORE the chassis; ie. their position becomes invalid after the step. Thus when you render wheels, you must update wheel transforms before rendering them. See raycastVehicle demo for an example.
+	 * @param wheelIndex The wheel index to update.
 	 */
 	public final native void updateWheelTransform(int wheelIndex) /*-{
 		this.updateWheelTransform(wheelIndex);

@@ -1,3 +1,6 @@
+// The MIT License (MIT)
+// Copyright (c) 2015 Jérémie Gottero
+
 package com.github.gwtcannonjs.client.objects;
 
 import com.github.gwtcannonjs.client.collision.AABB;
@@ -814,6 +817,16 @@ public class Body extends EventTarget {
 	 */
 	public final native Body addShape(Shape shape) /*-{
 		return this.addShape(shape);
+	}-*/;
+	
+	/**
+	 * Add a shape to the body with a local offset and orientation.
+	 * @param shape
+	 * @param offset
+	 * @return The body object, for chainability.
+	 */
+	public final native Body addShape(Shape shape, Vec3 offset) /*-{
+		return this.addShape(shape, offset);
 	}-*/;
 	
 	private static native void initializeConstants() /*-{

@@ -1,5 +1,9 @@
+// The MIT License (MIT)
+// Copyright (c) 2015 Jérémie Gottero
+
 package com.github.gwtcannonjs.client.shapes;
 
+import com.github.gwtcannonjs.client.math.Vec3;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsArrayInteger;
 import com.google.gwt.core.client.JsArrayNumber;
@@ -97,6 +101,32 @@ public class Heightfield extends Shape {
 	 */
 	public final native Heightfield withElementSize(double elementSize) /*-{
 		this.elementSize = elementSize;
+		return this;
+	}-*/;
+	
+	public final native ConvexPolyhedron getPillarConvex() /*-{
+		return this.pillarConvex;
+	}-*/;
+	
+	public final native void setPillarConvex(ConvexPolyhedron pillarConvex) /*-{
+		this.pillarConvex = pillarConvex;
+	}-*/;
+	
+	public final native Heightfield withPillarConvex(ConvexPolyhedron pillarConvex) /*-{
+		this.pillarConvex = pillarConvex;
+		return this;
+	}-*/;
+	
+	public final native Vec3 getPillarOffset() /*-{
+		return this.pillarOffset;
+	}-*/;
+	
+	public final native void setPillarOffset(Vec3 pillarOffset) /*-{
+		this.pillarOffset = pillarOffset;
+	}-*/;
+	
+	public final native Heightfield withPillarOffset(Vec3 pillarOffset) /*-{
+		this.pillarOffset = pillarOffset;
 		return this;
 	}-*/;
 	
