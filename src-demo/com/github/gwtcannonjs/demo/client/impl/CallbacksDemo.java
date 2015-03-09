@@ -13,6 +13,7 @@ import com.github.gwtcannonjs.client.shapes.Shape;
 import com.github.gwtcannonjs.client.world.World;
 import com.github.gwtcannonjs.demo.client.DemoInstance;
 
+@SuppressWarnings("deprecation")
 public class CallbacksDemo implements DemoInstance {
     @Override
     public String getName() {
