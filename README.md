@@ -88,7 +88,7 @@ for (int i = 0; i < 60; ++i){
 
 ## Learn cannon.js
 
-Have a look at http://cannonjs.org website!
+Have a look at the http://cannonjs.org website!
 
 ### JavaScript vs Java/GWT syntax
 
