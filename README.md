@@ -12,7 +12,7 @@ Most cannon.js demos were translated in Java/GWT: http://gwt-cannonjs.appspot.co
 The wrapper is guaranteed to add no overhead *(1)* over the cannon.js library code, both in terms of cpu and code size. Only JavaScriptObject (JSO) are manipulated, which will be eliminated during the inlining/pruning phases of the GWT compiler.
 
 The drawback is that some methods expect a JsArray as a parameter or return type, which is harder to manipulate than plain Java array or collections.
-If you prefer to manipulate Java standard collections, you will have to write your own (un)wrapper. I may provide an utility class later, but keep in mind that it may affect performance.
+If you prefer to use Java standard collections, you will have to write your own (un)wrapper. I may provide an utility class later, but keep in mind that it will probably affect performance.
 
 *(1) The exception to the rule is methods that accept a JavaScript function as a parameter (event listeners for example): as it's impossible to instantiate a method object in Java, each function parameter must be wrapped in a interface that requires a lightweight (un)wrapping operation.*
 
@@ -26,11 +26,11 @@ The drawback of this approach is that it directly relies on comments quality. Bu
 
 ## Getting started
 
-1. Configure your project
+**1. Configure your project**
 
 Download the latest release of [gwt-cannonjs.jar](https://github.com/jgottero/gwt-cannonjs/blob/master/build/gwt-cannonjs.jar). Add the jar to your project classpath.
 
-2. Configure your GWT module
+**2. Configure your GWT module**
 
 Add the following line in your GWT module file (*.gwt.xml).
 
@@ -38,7 +38,7 @@ Add the following line in your GWT module file (*.gwt.xml).
 <inherits name="com.github.gwtcannonjs.Core"/>
 ```
 
-3. Inject cannon.js runtime
+**3. Inject cannon.js runtime**
 
 You must inject the cannon.js file **before** using any class of the library. The easiest way to achieve it is to use the following method:
 
@@ -48,7 +48,7 @@ CANNON.injectRuntime();
 
 It will embed cannon.js straight in GWT compilation output files. Alternatively, you can use a script tag to load cannon.js in your HTML page before your *.nocache.js file.
 
-4. Hello world!
+**4. Hello world!**
 
 The sample code below is a GWT port of the cannon.js "hello world" example. It creates a sphere on a plane, steps the simulation, and prints the sphere simulation to the console.
 
@@ -86,9 +86,13 @@ for (int i = 0; i < 60; ++i){
 }
 ```
 
-## JavaScript vs Java/GWT syntax
+## Learn cannon.js
 
-### Constructors
+Have a look at http://cannonjs.org website!
+
+### JavaScript vs Java/GWT syntax
+
+#### Constructors
 
 As a JSO cannot be instantiated in GWT, all constructors are provided as static methods in the CANNON class:
 
@@ -102,7 +106,7 @@ Java/GWT
 World world = CANNON.newWorld();
 ```
 
-### Constructor options
+#### Constructor options
 
 Use the chain setter (with*) to easily configure several options at once:
 
@@ -122,7 +126,7 @@ Body sphereBody = CANNON.newBody(CANNON.newBodyOptions().
 );
 ```
 
-### Properties
+#### Properties
 
 Each property has a corresponding getter/setter/chain setter (with*).
 
@@ -138,7 +142,7 @@ world.getGravity().set(0, 0, -9.82);
 world.setGravity(CANNON.newVec3(0, 0, -9.82));
 ```
 
-### Callbacks
+#### Callbacks
 
 Function callbacks are implemented as Java interfaces.
 
@@ -158,6 +162,6 @@ sphereBody.addEventListener("collide", new EventListener() {
 });
 ```
 
-### Release notes
+## Release notes
 
- * (9th of march 2015) First release around cannon.js v0.6.1.
+ * (9th of march 2015) First release, built around cannon.js v0.6.1.
