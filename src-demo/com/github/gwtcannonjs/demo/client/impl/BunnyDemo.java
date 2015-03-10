@@ -1,7 +1,5 @@
-/* The MIT License (MIT)
- * 
- * Copyright (c) 2015 Jérémie Gottero
- */
+// The MIT License (MIT)
+// Copyright (c) 2015 Jérémie Gottero
 
 package com.github.gwtcannonjs.demo.client.impl;
 
